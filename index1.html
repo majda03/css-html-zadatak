@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - HTML and CSS</title>
+    <style>
+        /* 1. Linkovi koji upućuju na bilo koji Google sajt (Google.com) */
+        a[href*="google.com"] {
+            color: green; /* Tekst linka u zelenoj boji */
+        }
+
+        /* 2. Link koji upućuje na LINK group web sajt */
+        a[href*="linkgroup"] {
+            color: red; /* Tekst linka u crvenoj boji */
+        }
+
+        /* 3. Naizmenično obojiti paragrafe unutar #second-div */
+        #second-div p:nth-child(odd) {
+            color: red; /* Crvena boja za neparne paragrafe */
+        }
+
+        #second-div p:nth-child(even) {
+            color: blue; /* Plava boja za parne paragrafe */
+        }
+
+        /* 4. Dodavanje teksta 'NEW' na kraj paragrafa 2 i 3 u žutoj boji */
+        p:nth-of-type(2)::after,
+        p:nth-of-type(3)::after {
+            content: " NEW";
+            color: yellow; /* Žuta boja za 'NEW' tekst */
+        }
+
+        /* 5. Prelazak miša na Paragraph 10, tekst postaje italic */
+        p:nth-of-type(10):hover {
+            font-style: italic; /* Italic font na hover */
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Main Heading</h1>
+        <p>Paragraph 1</p>
+
+        <!-- Links section -->
+        <a href="https://www.google.com">Google</a>
+        <a href="https://www.google.com/doodles">Google Doodles</a>
+        <a href="https://www.linkgroup.com">Goto Link Group</a>
+
+        <h2>Subheading</h2>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+
+        <h3>Sub subheading</h3>
+        <p>Paragraph 4</p>
+        <p>Paragraph 5</p>
+        <p>Paragraph 6</p>
+        <p>Paragraph 7</p>
+        <p>Paragraph 8</p>
+        <p>Paragraph 9</p>
+        <p>Paragraph 10</p>
+
+        <div id="second-div">
+            <p>Paragraph 11 (in second div)</p>
+            <p>Paragraph 12 (in second div)</p>
+            <p>Paragraph 13 (in second div)</p>
+        </div>
+    </div>
+
+</body>
+</html>
